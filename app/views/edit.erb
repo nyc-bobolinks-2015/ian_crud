@@ -1,0 +1,12 @@
+<h1>Oh, come to change your monologue last second?</h1>
+
+<form method="post" action="/auditions/<%=@audition.id%>">
+	<input type="hidden" name="_method" value="put">
+	<label for="audition_title_input">What is your name?</label>
+	<input id="audition_title_input" name="audition[title]" type="text" placeholder="name">
+
+	<label for="audition_monologue_input">Description:</label>
+	<input id="audition_monologue_input" name="audition[monologue]" type="text" placeholder="monologue">	
+
+	<input type="submit" value="Update your audition" class="button">
+</form>

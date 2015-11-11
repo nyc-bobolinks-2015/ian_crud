@@ -1,0 +1,15 @@
+<h1>Sign up for the school play!</h1>
+
+<a href="/auditions/new">Sign up!</a>
+
+<ul>
+	<% @auditions.each do |audition| %>
+	<li><a href="/auditions/<%=audition.id%>"><%= audition.title %></a>
+		<p><a href="<%= "auditions/#{audition.id}" %>">details</a>
+		<a href="<%= "auditions/#{audition.id}/edit" %>">edit</a>
+		<form method="post" action="/auditions/<%= audition.id %>">
+		<input type="hidden" name="_method" value="delete">
+		<input type="submit" value="delete" class="button">
+	<% end %>
+</ul>
+
