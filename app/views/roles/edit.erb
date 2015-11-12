@@ -1,0 +1,12 @@
+<h1>Mr. Seahorse, are you changing characters in your play? You're not changing anything in Godspell, are you? Mr. Seahorse?</h1>
+
+<form method="post" action="/roles/<%=@role.id%>">
+	<input type="hidden" name="_method" value="put">
+	<label for="role_title_input">What is your name?</label>
+	<input id="role_title_input" name="role[title]" type="text" placeholder="name">
+
+	<label for="role_description_input">Description:</label>
+	<input id="role_description_input" name="role[description]" type="text" placeholder="type">
+
+	<input type="submit" value="Update your role" class="button">
+</form>

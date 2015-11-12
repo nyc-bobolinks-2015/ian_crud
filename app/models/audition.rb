@@ -1,3 +1,4 @@
 class Audition < ActiveRecord::Base
-  # Remember to create a migration!
+  has_many :actorroles
+  has_many :roles, through: :actorroles
 end

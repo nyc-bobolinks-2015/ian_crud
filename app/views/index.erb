@@ -1,16 +1,13 @@
-<h1>Sign up for the school play!</h1>
+<h3>Welcome to the Petersville Union high school Play Sign Up and Role Cataloguing System, or</h3>
 
-<a href="/auditions/new">Sign up!</a>
+<h1>PUPSUCS!</h1>
 
-<ul>
-	<% @auditions.each do |audition| %>
-	<li><a href="/auditions/<%=audition.id%>"><%= audition.title %></a>
-		<p><a href="<%= "auditions/#{audition.id}" %>">details</a>
-		<a href="<%= "auditions/#{audition.id}/edit" %>">edit</a>
-		<form method="post" action="/auditions/<%= audition.id %>">
-		<input type="hidden" name="_method" value="delete">
-		<input type="submit" value="delete" class="button">
-		</form>
-	<% end %>
-</ul>
+<h3>Sign up or add a role below:</h3>
 
+<p>
+<a href="/auditions">Sign up for the play!</a>
+</p>
+
+<p>
+<a href="/roles">Add a role!</a>
+</p>
